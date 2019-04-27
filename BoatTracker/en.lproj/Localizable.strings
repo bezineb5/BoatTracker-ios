@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  BoatTracker
+
+  Created by Benjamin on 25/04/2019.
+  Copyright © 2019 Courageous. All rights reserved.
+*/
+
+"DISTANCE_TO_HOME" = "Distance to the base";
+"SUNSET_IN" = "Sunset in %@";

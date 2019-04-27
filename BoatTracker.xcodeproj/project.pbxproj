@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EDEAA705DDD9432E5728051 /* Pods_BoatTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88D16933DE7F429516C0D63 /* Pods_BoatTracker.framework */; };
+		431B53472272728000E9AC71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 431B53492272728000E9AC71 /* Localizable.strings */; };
+		4381E41B226DE60D0050D48F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381E41A226DE60D0050D48F /* AppDelegate.swift */; };
+		4381E41D226DE60D0050D48F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381E41C226DE60D0050D48F /* ViewController.swift */; };
+		4381E420226DE60D0050D48F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4381E41E226DE60D0050D48F /* Main.storyboard */; };
+		4381E422226DE60E0050D48F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4381E421226DE60E0050D48F /* Assets.xcassets */; };
+		4381E425226DE60E0050D48F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4381E423226DE60E0050D48F /* LaunchScreen.storyboard */; };
+		4381E430226DE60E0050D48F /* BoatTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381E42F226DE60E0050D48F /* BoatTrackerTests.swift */; };
+		4381E43B226DE60E0050D48F /* BoatTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381E43A226DE60E0050D48F /* BoatTrackerUITests.swift */; };
+		86413613124EE4EFB6557016 /* Pods_BoatTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008788B950F1BCB16E57E4A8 /* Pods_BoatTrackerUITests.framework */; };
+		950EB3BCEE8915D3970F83B1 /* Pods_BoatTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC67FE84943A041614267BD6 /* Pods_BoatTrackerTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4381E42C226DE60E0050D48F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4381E40F226DE60D0050D48F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4381E416226DE60D0050D48F;
+			remoteInfo = BoatTracker;
+		};
+		4381E437226DE60E0050D48F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4381E40F226DE60D0050D48F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4381E416226DE60D0050D48F;
+			remoteInfo = BoatTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008788B950F1BCB16E57E4A8 /* Pods_BoatTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoatTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		101271B583077B1383F02DA3 /* Pods-BoatTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoatTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-BoatTrackerTests/Pods-BoatTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		1691641CA287A5CE0B7FA6E0 /* Pods-BoatTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoatTracker.debug.xcconfig"; path = "Target Support Files/Pods-BoatTracker/Pods-BoatTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		3F0127C2564355FC23A922AC /* Pods-BoatTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoatTracker.release.xcconfig"; path = "Target Support Files/Pods-BoatTracker/Pods-BoatTracker.release.xcconfig"; sourceTree = "<group>"; };
+		431B53482272728000E9AC71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4381E417226DE60D0050D48F /* BoatTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoatTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4381E41A226DE60D0050D48F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4381E41C226DE60D0050D48F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4381E41F226DE60D0050D48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4381E421226DE60E0050D48F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4381E424226DE60E0050D48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4381E426226DE60E0050D48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4381E42B226DE60E0050D48F /* BoatTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoatTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4381E42F226DE60E0050D48F /* BoatTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatTrackerTests.swift; sourceTree = "<group>"; };
+		4381E431226DE60E0050D48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4381E436226DE60E0050D48F /* BoatTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoatTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4381E43A226DE60E0050D48F /* BoatTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatTrackerUITests.swift; sourceTree = "<group>"; };
+		4381E43C226DE60E0050D48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93172DDB2CA32F17CE544F23 /* Pods-BoatTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoatTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-BoatTrackerUITests/Pods-BoatTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C207C3C941A3F858D85D5BFF /* Pods-BoatTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoatTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-BoatTrackerTests/Pods-BoatTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5DE69AD84CA9D276C58F4AB /* Pods-BoatTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoatTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-BoatTrackerUITests/Pods-BoatTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D88D16933DE7F429516C0D63 /* Pods_BoatTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoatTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC67FE84943A041614267BD6 /* Pods_BoatTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoatTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4381E414226DE60D0050D48F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EDEAA705DDD9432E5728051 /* Pods_BoatTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4381E428226DE60E0050D48F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950EB3BCEE8915D3970F83B1 /* Pods_BoatTrackerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4381E433226DE60E0050D48F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86413613124EE4EFB6557016 /* Pods_BoatTrackerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4381E40E226DE60D0050D48F = {
+			isa = PBXGroup;
+			children = (
+				4381E419226DE60D0050D48F /* BoatTracker */,
+				4381E42E226DE60E0050D48F /* BoatTrackerTests */,
+				4381E439226DE60E0050D48F /* BoatTrackerUITests */,
+				4381E418226DE60D0050D48F /* Products */,
+				FC31FA26D476AA33B6C9B930 /* Pods */,
+				E1F48547BA66C6DCE212CF77 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4381E418226DE60D0050D48F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4381E417226DE60D0050D48F /* BoatTracker.app */,
+				4381E42B226DE60E0050D48F /* BoatTrackerTests.xctest */,
+				4381E436226DE60E0050D48F /* BoatTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4381E419226DE60D0050D48F /* BoatTracker */ = {
+			isa = PBXGroup;
+			children = (
+				4381E41A226DE60D0050D48F /* AppDelegate.swift */,
+				4381E41C226DE60D0050D48F /* ViewController.swift */,
+				4381E41E226DE60D0050D48F /* Main.storyboard */,
+				4381E421226DE60E0050D48F /* Assets.xcassets */,
+				431B53492272728000E9AC71 /* Localizable.strings */,
+				4381E423226DE60E0050D48F /* LaunchScreen.storyboard */,
+				4381E426226DE60E0050D48F /* Info.plist */,
+			);
+			path = BoatTracker;
+			sourceTree = "<group>";
+		};
+		4381E42E226DE60E0050D48F /* BoatTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4381E42F226DE60E0050D48F /* BoatTrackerTests.swift */,
+				4381E431226DE60E0050D48F /* Info.plist */,
+			);
+			path = BoatTrackerTests;
+			sourceTree = "<group>";
+		};
+		4381E439226DE60E0050D48F /* BoatTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4381E43A226DE60E0050D48F /* BoatTrackerUITests.swift */,
+				4381E43C226DE60E0050D48F /* Info.plist */,
+			);
+			path = BoatTrackerUITests;
+			sourceTree = "<group>";
+		};
+		E1F48547BA66C6DCE212CF77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D88D16933DE7F429516C0D63 /* Pods_BoatTracker.framework */,
+				FC67FE84943A041614267BD6 /* Pods_BoatTrackerTests.framework */,
+				008788B950F1BCB16E57E4A8 /* Pods_BoatTrackerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC31FA26D476AA33B6C9B930 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1691641CA287A5CE0B7FA6E0 /* Pods-BoatTracker.debug.xcconfig */,
+				3F0127C2564355FC23A922AC /* Pods-BoatTracker.release.xcconfig */,
+				C207C3C941A3F858D85D5BFF /* Pods-BoatTrackerTests.debug.xcconfig */,
+				101271B583077B1383F02DA3 /* Pods-BoatTrackerTests.release.xcconfig */,
+				C5DE69AD84CA9D276C58F4AB /* Pods-BoatTrackerUITests.debug.xcconfig */,
+				93172DDB2CA32F17CE544F23 /* Pods-BoatTrackerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4381E416226DE60D0050D48F /* BoatTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4381E43F226DE60E0050D48F /* Build configuration list for PBXNativeTarget "BoatTracker" */;
+			buildPhases = (
+				9DA84F7D2A020D97678BD8B8 /* [CP] Check Pods Manifest.lock */,
+				4381E413226DE60D0050D48F /* Sources */,
+				4381E414226DE60D0050D48F /* Frameworks */,
+				4381E415226DE60D0050D48F /* Resources */,
+				00276F0248DA3BBB3A468D47 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoatTracker;
+			productName = BoatTracker;
+			productReference = 4381E417226DE60D0050D48F /* BoatTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4381E42A226DE60E0050D48F /* BoatTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4381E442226DE60E0050D48F /* Build configuration list for PBXNativeTarget "BoatTrackerTests" */;
+			buildPhases = (
+				76AB2DEDD93B4BACF7FC6364 /* [CP] Check Pods Manifest.lock */,
+				4381E427226DE60E0050D48F /* Sources */,
+				4381E428226DE60E0050D48F /* Frameworks */,
+				4381E429226DE60E0050D48F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4381E42D226DE60E0050D48F /* PBXTargetDependency */,
+			);
+			name = BoatTrackerTests;
+			productName = BoatTrackerTests;
+			productReference = 4381E42B226DE60E0050D48F /* BoatTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4381E435226DE60E0050D48F /* BoatTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4381E445226DE60E0050D48F /* Build configuration list for PBXNativeTarget "BoatTrackerUITests" */;
+			buildPhases = (
+				CC841E2A2D2C2DB68B43B5A8 /* [CP] Check Pods Manifest.lock */,
+				4381E432226DE60E0050D48F /* Sources */,
+				4381E433226DE60E0050D48F /* Frameworks */,
+				4381E434226DE60E0050D48F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4381E438226DE60E0050D48F /* PBXTargetDependency */,
+			);
+			name = BoatTrackerUITests;
+			productName = BoatTrackerUITests;
+			productReference = 4381E436226DE60E0050D48F /* BoatTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4381E40F226DE60D0050D48F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Courageous;
+				TargetAttributes = {
+					4381E416226DE60D0050D48F = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					4381E42A226DE60E0050D48F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4381E416226DE60D0050D48F;
+					};
+					4381E435226DE60E0050D48F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4381E416226DE60D0050D48F;
+					};
+				};
+			};
+			buildConfigurationList = 4381E412226DE60D0050D48F /* Build configuration list for PBXProject "BoatTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4381E40E226DE60D0050D48F;
+			productRefGroup = 4381E418226DE60D0050D48F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4381E416226DE60D0050D48F /* BoatTracker */,
+				4381E42A226DE60E0050D48F /* BoatTrackerTests */,
+				4381E435226DE60E0050D48F /* BoatTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4381E415226DE60D0050D48F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4381E425226DE60E0050D48F /* LaunchScreen.storyboard in Resources */,
+				431B53472272728000E9AC71 /* Localizable.strings in Resources */,
+				4381E422226DE60E0050D48F /* Assets.xcassets in Resources */,
+				4381E420226DE60D0050D48F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4381E429226DE60E0050D48F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4381E434226DE60E0050D48F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00276F0248DA3BBB3A468D47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoatTracker/Pods-BoatTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/OpenAPIClient/OpenAPIClient.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySuncalc/SwiftySuncalc.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenAPIClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySuncalc.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoatTracker/Pods-BoatTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76AB2DEDD93B4BACF7FC6364 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoatTrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DA84F7D2A020D97678BD8B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoatTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC841E2A2D2C2DB68B43B5A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoatTrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4381E413226DE60D0050D48F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4381E41D226DE60D0050D48F /* ViewController.swift in Sources */,
+				4381E41B226DE60D0050D48F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4381E427226DE60E0050D48F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4381E430226DE60E0050D48F /* BoatTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4381E432226DE60E0050D48F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4381E43B226DE60E0050D48F /* BoatTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4381E42D226DE60E0050D48F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4381E416226DE60D0050D48F /* BoatTracker */;
+			targetProxy = 4381E42C226DE60E0050D48F /* PBXContainerItemProxy */;
+		};
+		4381E438226DE60E0050D48F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4381E416226DE60D0050D48F /* BoatTracker */;
+			targetProxy = 4381E437226DE60E0050D48F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		431B53492272728000E9AC71 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				431B53482272728000E9AC71 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4381E41E226DE60D0050D48F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4381E41F226DE60D0050D48F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4381E423226DE60E0050D48F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4381E424226DE60E0050D48F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4381E43D226DE60E0050D48F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4381E43E226DE60E0050D48F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4381E440226DE60E0050D48F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1691641CA287A5CE0B7FA6E0 /* Pods-BoatTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q6QYLFN97;
+				INFOPLIST_FILE = BoatTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.courageous.BoatTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4381E441226DE60E0050D48F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0127C2564355FC23A922AC /* Pods-BoatTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q6QYLFN97;
+				INFOPLIST_FILE = BoatTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.courageous.BoatTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4381E443226DE60E0050D48F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C207C3C941A3F858D85D5BFF /* Pods-BoatTrackerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q6QYLFN97;
+				INFOPLIST_FILE = BoatTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.courageous.BoatTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoatTracker.app/BoatTracker";
+			};
+			name = Debug;
+		};
+		4381E444226DE60E0050D48F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 101271B583077B1383F02DA3 /* Pods-BoatTrackerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q6QYLFN97;
+				INFOPLIST_FILE = BoatTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.courageous.BoatTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoatTracker.app/BoatTracker";
+			};
+			name = Release;
+		};
+		4381E446226DE60E0050D48F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5DE69AD84CA9D276C58F4AB /* Pods-BoatTrackerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q6QYLFN97;
+				INFOPLIST_FILE = BoatTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.courageous.BoatTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoatTracker;
+			};
+			name = Debug;
+		};
+		4381E447226DE60E0050D48F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93172DDB2CA32F17CE544F23 /* Pods-BoatTrackerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q6QYLFN97;
+				INFOPLIST_FILE = BoatTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.courageous.BoatTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoatTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4381E412226DE60D0050D48F /* Build configuration list for PBXProject "BoatTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4381E43D226DE60E0050D48F /* Debug */,
+				4381E43E226DE60E0050D48F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4381E43F226DE60E0050D48F /* Build configuration list for PBXNativeTarget "BoatTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4381E440226DE60E0050D48F /* Debug */,
+				4381E441226DE60E0050D48F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4381E442226DE60E0050D48F /* Build configuration list for PBXNativeTarget "BoatTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4381E443226DE60E0050D48F /* Debug */,
+				4381E444226DE60E0050D48F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4381E445226DE60E0050D48F /* Build configuration list for PBXNativeTarget "BoatTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4381E446226DE60E0050D48F /* Debug */,
+				4381E447226DE60E0050D48F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4381E40F226DE60D0050D48F /* Project object */;
+}
