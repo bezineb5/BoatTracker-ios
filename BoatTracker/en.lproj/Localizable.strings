@@ -8,3 +8,14 @@
 
 "DISTANCE_TO_HOME" = "Distance to the base";
 "SUNSET_IN" = "Sunset in %@";
+"CHECK_OUT" = "Check-out";
+"CHECK_IN" = "Check-in";
+"CHECK_IN_CONFIRMATION" = "Are you sure you want to return the boat?";
+"CHECK_IN_CONFIRMATION_TITLE" = "Checking-in";
+"YES" = "Yes";
+"NO" = "No";
+"CANCEL" = "Cancel";
+"OK" = "Ok";
+"PHONE_NUMBER" = "Phone number";
+"USER_NAME" = "Name";
+"CHECK_OUT_DETAILS_MESSAGE" = "Please enter your name and phone number to be contacted by the base in case of need";

@@ -51,7 +51,7 @@ class ViewController: UIViewController, MKMapViewDelegate, BarcodeScannerCodeDel
         // UI labels
         formatter.dateStyle = .none
         formatter.timeStyle = .short
-        labelDistanceToHome.text = NSLocalizedString("DISTANCE_TO_HOME", comment: "")
+        labelDistanceToHome.text = "DISTANCE_TO_HOME".localized()
         updateUi()
     }
     
@@ -72,19 +72,32 @@ class ViewController: UIViewController, MKMapViewDelegate, BarcodeScannerCodeDel
     }
     
     @IBAction func onCheckInOut(_ sender: Any) {
-        let viewController = BarcodeScannerViewController()
-        viewController.codeDelegate = self
-        viewController.dismissalDelegate = self
-        viewController.errorDelegate = self
-        
-        present(viewController, animated: true, completion: nil)
+        if (isCheckedOut()) {
+            // Check-in (return) the boat
+            let alert = UIAlertController(title: "CHECK_IN_CONFIRMATION_TITLE".localized(), message: "CHECK_IN_CONFIRMATION".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "NO".localized(), style: .cancel, handler: { _ in
+                return
+            }))
+            alert.addAction(UIAlertAction(title: "YES".localized(), style: .default, handler: { _ in
+                self.checkInBoat()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            // Check-out the boat
+            let viewController = BarcodeScannerViewController()
+            viewController.codeDelegate = self
+            viewController.dismissalDelegate = self
+            viewController.errorDelegate = self
+            
+            present(viewController, animated: true, completion: nil)
+        }
     }
     
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
-        controller.dismiss(animated: true, completion: nil)
-
-        print(code)
-        checkOutBoat(secret: code)
+        controller.dismiss(animated: true, completion: {
+            print(code)
+            self.checkOutBoat(secret: code)
+        })
     }
     
     func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
@@ -115,6 +128,7 @@ class ViewController: UIViewController, MKMapViewDelegate, BarcodeScannerCodeDel
         // Configure and start the service.
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.distanceFilter = 10.0  // In meters.
+        locationManager.allowsBackgroundLocationUpdates = true
         locationManager.pausesLocationUpdatesAutomatically = true
         locationManager.activityType = CLActivityType.otherNavigation
         locationManager.startUpdatingLocation()
@@ -138,8 +152,13 @@ class ViewController: UIViewController, MKMapViewDelegate, BarcodeScannerCodeDel
             break
             
         case .authorizedWhenInUse:
-            // Enable only your app's when-in-use features.
-            startReceivingLocationChanges()
+            if (shouldAskPermission) {
+                // Request when-in-use authorization initially
+                manager.requestAlwaysAuthorization()
+            } else {
+                // Enable only your app's when-in-use features.
+                startReceivingLocationChanges()
+            }
             break
             
         case .authorizedAlways:
@@ -149,8 +168,8 @@ class ViewController: UIViewController, MKMapViewDelegate, BarcodeScannerCodeDel
             
         case .notDetermined:
             if (shouldAskPermission) {
-                // Request when-in-use authorization initially
-                manager.requestWhenInUseAuthorization()
+                // Request always authorization initially
+                manager.requestAlwaysAuthorization()
             }
             break
             
@@ -188,14 +207,88 @@ class ViewController: UIViewController, MKMapViewDelegate, BarcodeScannerCodeDel
             // Already check-out
             return
         }
+        
+        self.showCheckOutDialog() { name, phoneNumber in
+            let assignationUpdate = AssignationUpdate(userName: name, userPhone: phoneNumber)
+            UsersAPI.checkOut(secret: secretUuid, body: assignationUpdate) {data,error in
+                if (error != nil) {
+                    print("Unable to check-out")
+                } else {
+                    print("Check-out successful")
+                    self.secret = secretUuid
+                    self.updateUi()
+                    self.enableLocationServices()
+                }
+            }
+        }
+    }
+    
+    func showCheckOutDialog(completion: @escaping ((_ name: String?, _ phoneNumber: String?) -> Void)) {
+        // Largely from: https://www.simplifiedios.net/ios-dialog-box-with-input/
+        
+        // Get application preferences
+        let preferences = UserDefaults.standard
+        let kNameKey = "USER_NAME"
+        let kPhoneKey = "USER_PHONE"
+        
+        // Creating UIAlertController and
+        // Setting title and message for the alert dialog
+        let alertController = UIAlertController(title: "CHECK_OUT".localized(), message: "CHECK_OUT_DETAILS_MESSAGE".localized(), preferredStyle: .alert)
+        
+        // The confirm action taking the inputs
+        let confirmAction = UIAlertAction(title: "OK".localized(), style: .default) { (_) in
+        
+            // Getting the input values from user
+            let name = alertController.textFields?[0].text
+            let phoneNumber = alertController.textFields?[1].text
+            
+            // Save the preferences for faster check-out next time
+            preferences.set(name, forKey: kNameKey)
+            preferences.set(phoneNumber, forKey: kPhoneKey)
 
-        let assignationUpdate = AssignationUpdate(userName: "Test", userPhone: "1234567890")
-        UsersAPI.checkOut(secret: secretUuid, body: assignationUpdate) {data,error in
+            completion(name, phoneNumber)
+        }
+        
+        // The cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "CANCEL".localized(), style: .cancel) { (_) in }
+        
+        // Adding textfields to our dialog box
+        alertController.addTextField { (textField) in
+            textField.placeholder = "USER_NAME".localized()
+            textField.text = preferences.string(forKey: kNameKey)
+        }
+        alertController.addTextField { (textField) in
+            textField.placeholder = "PHONE_NUMBER".localized()
+            textField.text = preferences.string(forKey: kPhoneKey)
+        }
+        
+        // Adding the action to dialogbox
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        // Finally presenting the dialog box
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func checkInBoat() {
+        guard let secret = self.secret else { return }
+        UsersAPI.checkIn(secret: secret) {data, error in
             if (error != nil) {
-                print("Unable to check-out")
+                if let err = error as? ErrorResponse {
+                    switch(err){
+                    case .error(404, _, _):
+                        // Boat has been checked-in, go on with the process
+                        self.stopReceivingLocationChanges()
+                        self.secret = nil
+                        self.updateUi()
+                        break
+                    case .error(_, _, _):
+                        print("Unable to check-in")
+                    }
+                }
             } else {
-                print("Check-out successful")
-                self.secret = secretUuid
+                self.stopReceivingLocationChanges()
+                self.secret = nil
                 self.updateUi()
             }
         }
@@ -209,26 +302,42 @@ class ViewController: UIViewController, MKMapViewDelegate, BarcodeScannerCodeDel
         let locationUpdate = LocationUpdate(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
         UsersAPI.trackLocation(secret: self.secret!, body: locationUpdate) { data, error in
             if (error != nil) {
-                print("Unable to report location")
+                if let err = error as? ErrorResponse {
+                    switch(err){
+                    case .error(403, _, _):
+                        // Boat has been checked-in
+                        self.checkInBoat()
+                        break
+                    case .error(_, _, _):
+                        print("Unable to report location")
+                    }
+                }
             }
         }
     }
     
+    func isCheckedOut() -> Bool {
+        return self.secret != nil
+    }
+    
     func updateUi() {
+        let resName = (isCheckedOut()) ? "CHECK_IN" : "CHECK_OUT"
+        checkInOutButton.setTitle(resName.localized(), for: .normal)
+        
         self.updateBoatName()
         self.updateDistance(location: self.lastLocation)
         self.updateSunsetTime(location: self.lastLocation)
     }
     
     func updateBoatName() {
-        if (self.secret != nil) {
+        if (isCheckedOut() && self.secret != nil) {
             UsersAPI.assignedItem(secret: self.secret!) {data,error in
              if (error != nil || data == nil) {
-             print("Unable to retrieve boat name")
+                print("Unable to retrieve boat name")
              } else {
                 self.labelBoatName.text = data?.name
              }
-             }
+            }
         } else {
             self.labelBoatName.text = kNoText
         }
@@ -253,7 +362,7 @@ class ViewController: UIViewController, MKMapViewDelegate, BarcodeScannerCodeDel
             if (sunsetTime != nil) {
                 let interval = sunsetTime!.timeIntervalSinceNow
                 labelSunsetTime.text = formatter.string(from: sunsetTime!)
-                let sunsetLabel = NSLocalizedString("SUNSET_IN", comment: "")
+                let sunsetLabel = "SUNSET_IN".localized()
                 let intervalStr = interval.format(using: [.hour, .minute])
                 labelSunsetIn.text = String(format: sunsetLabel, arguments:  [intervalStr!])
             } else {
@@ -273,5 +382,11 @@ extension TimeInterval {
         formatter.zeroFormattingBehavior = .pad
         
         return formatter.string(from: self)
+    }
+}
+
+extension String {
+    func localized(withComment:String="") -> String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: withComment)
     }
 }

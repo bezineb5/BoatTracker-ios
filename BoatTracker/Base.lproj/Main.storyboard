@@ -25,9 +25,9 @@
                                 <rect key="frame" x="0.0" y="790" width="414" height="106"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWo-JE-aeg">
-                                        <rect key="frame" x="151.5" y="30" width="111" height="46"/>
+                                        <rect key="frame" x="85.5" y="30" width="243" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Check-out"/>
+                                        <state key="normal" title="BUTTON_CHECK_OUT"/>
                                         <connections>
                                             <action selector="onCheckInOut:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="9nc-SP-6BF"/>
                                         </connections>
